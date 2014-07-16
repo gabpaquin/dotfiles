@@ -15,7 +15,7 @@ Install
 
 Clone onto your laptop:
 
-    git clone git://github.com/thoughtbot/dotfiles.git
+    git clone git://github.com/Gabey/dotfiles.git
 
 (Or, [fork and keep your fork
 updated](http://robots.thoughtbot.com/keeping-a-github-fork-updated)).
@@ -33,6 +33,8 @@ After the initial installation, you can run `rcup` without the one-time variable
 `RCRC` being set (`rcup` will symlink the repo's `rcrc` to `~/.rcrc` for future
 runs of `rcup`). [See
 example](https://github.com/thoughtbot/dotfiles/blob/master/rcrc).
+
+    rcup -d .dotfiles -x README.md -x LICENSE -x Brewfile
 
 This command will create symlinks for config files in your home directory.
 Setting the `RCRC` environment variable tells `rcup` to use standard
