@@ -1,0 +1,22 @@
+
+f() {
+    find . -name "*"$1"*" ${(@)argv[2,$#]}
+}
+# Strict find
+sf() {
+    find . -name $*
+}
+
+# (f)ind by (n)ame
+# usage: fn foo 
+# to find all files containing 'foo' in the name
+function fn() { ls **/*$1* }
+
+
+# last command output 
+zmodload -i zsh/parameter
+insert-last-command-output() {
+LBUFFER+="$(eval $history[$((HISTCMD-1))])"
+}
+zle -N insert-last-command-output
+bindkey "^X^L" insert-last-command-output
