@@ -1,9 +1,12 @@
 " Leader
 let mapleader = " "
 
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PLUGIN VUNDLE 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -111,6 +114,7 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 " Index ctags from any project, including those outside Rails
 map <Leader>ct :!ctags -R .<CR>
 
+<<<<<<< 9a7de6e385b37b8e38defeda5a899af58d989841
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN VUNDLE 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
