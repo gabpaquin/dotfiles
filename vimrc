@@ -128,7 +128,7 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PLUGIN MAPPING 
+" PLUGIN MAPPING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-d>     :NERDTreeToggle<CR>
 map <C-t>     :CommandT<CR>
@@ -145,15 +145,15 @@ nnoremap <Leader>l :call RunLastSpec()<CR>
 nnoremap <Leader>r :RunInInteractiveShell<space>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERDTREE plugin 
+" NERDTREE plugin
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "autocmd vimenter * NERDTree
 "autocmd VimEnter * wincmd p
 "autocmd vimenter * if !argc() | NERDTree | endif
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-   
+
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" AUTOCOMPLETION 
+" AUTOCOMPLETION
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! InsertTabWrapper(direction)
   let oldisk=&isk "save the iskeyword options
@@ -173,7 +173,7 @@ inoremap <tab> <c-r>=InsertTabWrapper("forward")<cr>
 inoremap <s-tab> <c-r>=InsertTabWrapper("backward")<cr>
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SYNTAX  
+" SYNTAX
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Switch syntax highlighting on, when the terminal has colors
@@ -280,6 +280,7 @@ let g:html_indent_tags = 'li\|p'
 "in normal mode type enter to add a new line"
 nmap { :pu_<cr>
 nmap <Space> i_<Esc>r
+inoremap jj <ESC> 
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " leader key mapping 

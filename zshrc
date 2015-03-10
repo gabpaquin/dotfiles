@@ -100,14 +100,16 @@ export VISUAL=vim
 export EDITOR=$VISUAL
 
 # load rbenv if available
-if which rbenv &>/dev/null ; then
-  eval "$(rbenv init - --no-rehash)"
-fi
+#if which rbenv &>/dev/null ; then
+#  eval "$(rbenv init - --no-rehash)"
+#fi
 
 # load thoughtbot/dotfiles scripts
 export PATH=~/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/gabriel/.rvm/bin:/usr/local/sbin
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 export PATH="$HOME/.bin:$PATH"
+#terraform
+export ATLAS_TOKEN="YKFKmfh8xzdSs2-PZRqBmHQRZx3Us1sF4WdsCuRuv9asN_TDG85kexo_m6M8wfEdZUY"
 
 
 # mkdir .git/safe in the root of repositories you trust
@@ -128,10 +130,10 @@ bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
 
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
-if [[ -e "./.rvmrc" ]]; then
-  source ".rvmrc"
-fi
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
+#if [[ -e "./.rvmrc" ]]; then
+#  source ".rvmrc"
+#fi
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
