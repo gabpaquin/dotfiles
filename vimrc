@@ -1,5 +1,5 @@
 " Leader
-let mapleader = " "
+let mapleader = ","
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN VUNDLE 
@@ -64,7 +64,10 @@ set wrap
 set linebreak
 set nolist  " list disables linebreak
 set textwidth=0
+set incsearch     " do incremental searching
 set wrapmargin=0
+set laststatus=2  " Always display the status line
+set autowrite     " Automatically :write before running commands
 syntax enable
 
 set gfn=Monaco:h14  " setting to a good Mac OS X font
@@ -114,7 +117,6 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 " Index ctags from any project, including those outside Rails
 map <Leader>ct :!ctags -R .<CR>
 
-<<<<<<< 9a7de6e385b37b8e38defeda5a899af58d989841
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN VUNDLE 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -126,6 +128,21 @@ endif
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
+endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PLUGIN VUNDLE 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN MAPPING
@@ -244,8 +261,8 @@ if executable('ag')
 endif
 
 " Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
+"set textwidth=80
+"set colorcolumn=+1
 
 " Numbers
 set number
@@ -282,10 +299,6 @@ nmap { :pu_<cr>
 nmap <Space> i_<Esc>r
 inoremap jj <ESC> 
 
-" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" leader key mapping 
-" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader=","
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COMMAND-T SYNTAX 
@@ -337,21 +350,20 @@ map <leader>m :bprev<CR>
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " The Silver Searcher 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:agprg  = 'ag --nogroup --nocolor --column --ignore log'
-
-" bind K to grep word under cursor
-nnoremap K :Ag <C-R><C-W><CR>:cw<CR>
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ag_prg  = 'ag --nogroup --nocolor --column --ignore log'
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
+
+  " bind K to grep word under cursor
+  nnoremap K :Ag <C-R><C-W><CR>:cw<CR>
 endif
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

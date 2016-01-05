@@ -24,6 +24,8 @@ Install [rcm](https://github.com/thoughtbot/rcm):
 
     brew tap thoughtbot/formulae
     brew install rcm
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git
+"${ZDOTDIR:-$HOME}/.zprezto"
 
 Install the dotfiles:
 

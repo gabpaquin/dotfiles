@@ -5,7 +5,7 @@ for lib in ~/.zsh/lib/*; do
 done
 
 # load prompt
-source ~/.zsh/prompt/zprompt.zsh
+#source ~/.zsh/prompt/zprompt.zsh
 
 
 # load our own completion functions
@@ -124,6 +124,12 @@ export LC_MONETARY="en_US.UTF-8"
 export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+
+# Install go
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 
 bindkey -e
 bindkey '^[[1;9C' forward-word
