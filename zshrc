@@ -5,7 +5,7 @@ for lib in ~/.zsh/lib/*; do
 done
 
 # load prompt
-#source ~/.zsh/prompt/zprompt.zsh
+source ~/.zsh/prompt/zprompt.zsh
 
 
 # load our own completion functions

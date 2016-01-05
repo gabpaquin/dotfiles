@@ -24,6 +24,7 @@ Install [rcm](https://github.com/thoughtbot/rcm):
 
     brew tap thoughtbot/formulae
     brew install rcm
+    brew install fasd
     git clone --recursive https://github.com/sorin-ionescu/prezto.git
 "${ZDOTDIR:-$HOME}/.zprezto"
 
