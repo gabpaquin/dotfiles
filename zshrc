@@ -139,6 +139,9 @@ bindkey '^[[1;9D' backward-word
 #  source ".rvmrc"
 #fi
 
+# rbenv
+eval "$(rbenv init -)"
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 

@@ -1,3 +1,6 @@
+# Apply theming defaults
+PS1="%n@%m:%~%# "
+
 grey='\e[0;90m'
 
 #160 is red
@@ -17,8 +20,14 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=" %{$FG[040]%}  %{$reset_color%}"
 
 local user='%{$fg[yellow]%}%n@%{$fg[yellow]%}%m%{$reset_color%}'
 local pwd='%{$fg[green]%}%~%{$reset_color%}'
-#local rvm='%{$fg[red]%}$(rvm-prompt i v g)%{$reset_color%}'
-local rvm='%{$fg[red]%}$(rvm_prompt_info)%{$reset_color%}'
+local rvm=''
+if which rvm-prompt &> /dev/null; then
+  rvm='%{$fg[red]%}$(rvm_prompt_info)%{$reset_color%}'
+else
+  if which rbenv &> /dev/null; then
+    rvm='%{$fg[green]%}‹$(rbenv version | sed -e "s/ (set.*$//")›%{$reset_color%}'
+  fi
+fi
 local return_code='%(?..%{$fg[red]%}%? ↵%{$reset_color%})'
 local git_branch='$(git_prompt_status)%{$reset_color%}$(git_prompt_info)%{$reset_color%}'
 local sign='%{$fg[blue]%}$%{$reset_color%}'

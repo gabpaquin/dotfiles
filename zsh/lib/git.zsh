@@ -7,6 +7,12 @@ function git_prompt_info() {
   fi
 }
 
+#git_prompt_info() {
+#  current_branch=$(git current-branch 2> /dev/null)
+#  if [[ -n $current_branch ]]; then
+#    echo " %{$fg_bold[green]%}$current_branch%{$reset_color%}"
+#  fi
+#}
 
 # Checks if working tree is dirty
 parse_git_dirty() {
