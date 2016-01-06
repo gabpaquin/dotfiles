@@ -4,8 +4,6 @@ for lib in ~/.zsh/lib/*; do
   source $lib
 done
 
-# load prompt
-source ~/.zsh/prompt/zprompt.zsh
 
 
 # load our own completion functions
@@ -148,3 +146,6 @@ bindkey '^[[1;9D' backward-word
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
+# load prompt
+source ~/.zsh/prompt/zprompt.zsh
