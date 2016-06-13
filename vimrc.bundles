@@ -50,6 +50,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/simplefold'
+Plug 'tpope/vim-obsession'
+Plug 'christoomey/vim-tmux-navigator'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

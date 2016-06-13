@@ -24,7 +24,7 @@ local rvm=''
 if which rvm-prompt &> /dev/null; then
   rvm='%{$fg[red]%}$(rvm_prompt_info)%{$reset_color%}'
 else
-  if which rbenv &> /dev/null; then
+  if which rbenv local &> /dev/null; then
     rvm='%{$fg[green]%}‹$(rbenv version | sed -e "s/ (set.*$//")›%{$reset_color%}'
   fi
 fi
