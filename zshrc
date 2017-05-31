@@ -151,7 +151,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # tmuxinator
-source ~/.bin/tmuxinator.zsh
+#source ~/.bin/tmuxinator.zsh
 
 # load prompt
 source ~/.zsh/prompt/zprompt.zsh
