@@ -149,7 +149,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-d>     :NERDTreeToggle<CR>
 map <C-t>     :CommandT<CR>
-map <C-b>     :BufExplorer<CR>
+map <C-b>     :CtrlPBuffer<CR>
 map <C-o>     :TlistToggle<CR>
 map <C-a>     :Ag<Space>
 
