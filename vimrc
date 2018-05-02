@@ -2,7 +2,7 @@
 let mapleader = ","
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PLUGIN VUNDLE 
+" PLUGIN VUNDLE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if filereadable(expand("~/.vimrc.bundles"))
@@ -148,7 +148,7 @@ endif
 " PLUGIN MAPPING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-d>     :NERDTreeToggle<CR>
-map <C-t>     :CommandT<CR>
+map <C-t>     :ctrlp<CR>
 map <C-b>     :CtrlPBuffer<CR>
 map <C-o>     :TlistToggle<CR>
 map <C-a>     :Ag<Space>
@@ -292,16 +292,16 @@ set list listchars=tab:»·,trail:·
 let g:html_indent_tags = 'li\|p'
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Function 
+" Function
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "in normal mode type enter to add a new line"
 nmap { :pu_<cr>
 nmap <Space> i_<Esc>r
-inoremap jj <ESC> 
+inoremap jj <ESC>
 
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" COMMAND-T SYNTAX 
+" COMMAND-T SYNTAX
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Open files with <leader>f
 map <leader>g :CommandTFlush<cr>:CommandT<cr>
@@ -320,7 +320,7 @@ map <leader>gl :CommandTFlush<cr>:CommandT lib<cr>
 map <leader>ge :CommandTFlush<cr>:CommandT config<cr>
 map <leader>gs :CommandTFlush<cr>:CommandT app/assets/stylesheets<cr>
 
-" This is ember.js mapping 
+" This is ember.js mapping
 map <leader>gj :CommandTFlush<cr>:CommandT app/javascripts<cr>
 map <leader>jm :CommandTFlush<cr>:CommandT app/assets/javascripts/models<cr>
 map <leader>jc :CommandTFlush<cr>:CommandT app/assets/javascripts/controllers<cr>
@@ -348,7 +348,7 @@ map <leader>n :bnext<CR>
 map <leader>m :bprev<CR>
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" The Silver Searcher 
+" The Silver Searcher
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
@@ -367,7 +367,7 @@ if executable('ag')
 endif
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntastic  
+" Syntastic
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_check_on_open=1
 

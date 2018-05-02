@@ -55,6 +55,7 @@ Plug 'tpope/vim-obsession'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'chrisbra/csv.vim'
 Plug 'vim-airline/vim-airline'
+Plug 'fatih/vim-go'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
