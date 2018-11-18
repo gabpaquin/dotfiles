@@ -68,6 +68,7 @@ set incsearch     " do incremental searching
 set wrapmargin=0
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
+set re=1        "regex engine for syntax highlithing
 syntax enable
 
 set gfn=Monaco:h14  " setting to a good Mac OS X font

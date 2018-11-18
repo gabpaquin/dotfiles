@@ -104,7 +104,7 @@ export EDITOR=$VISUAL
 
 # load thoughtbot/dotfiles scripts
 export PATH=~/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/gabriel/.rvm/bin:/usr/local/sbin
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+#export PYTHONPATH=/usr/local/lib/python3.7/site-packages:$PYTHONPATH ## this line seems to be causing error need to run "unset PYTHONPATH" each time
 export PATH="$HOME/.bin:$PATH"
 #terraform
 export ATLAS_TOKEN="YKFKmfh8xzdSs2-PZRqBmHQRZx3Us1sF4WdsCuRuv9asN_TDG85kexo_m6M8wfEdZUY"
@@ -155,3 +155,10 @@ source ~/.bin/tmuxinator.zsh
 
 # load prompt
 source ~/.zsh/prompt/zprompt.zsh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
