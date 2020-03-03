@@ -104,6 +104,8 @@ export EDITOR=$VISUAL
 
 # load thoughtbot/dotfiles scripts
 export PATH=~/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/gabriel/.rvm/bin:/usr/local/sbin
+#adding dotnet
+export PATH=/usr/local/share/dotnet:$PATH
 #export PYTHONPATH=/usr/local/lib/python3.7/site-packages:$PYTHONPATH ## this line seems to be causing error need to run "unset PYTHONPATH" each time
 export PATH="$HOME/.bin:$PATH"
 #terraform
@@ -162,3 +164,7 @@ source ~/.zsh/prompt/zprompt.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
