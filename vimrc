@@ -289,6 +289,9 @@ nnoremap <leader><leader> <c-^>
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
+"Remove all trailing whitespace by pressing F5
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 

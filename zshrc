@@ -105,7 +105,7 @@ export EDITOR=$VISUAL
 # load thoughtbot/dotfiles scripts
 export PATH=~/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/gabriel/.rvm/bin:/usr/local/sbin
 #adding dotnet
-export PATH=/usr/local/share/dotnet:$PATH
+export PATH=/usr/local/share/dotnet:~/.dotnet/tools/:$PATH
 #export PYTHONPATH=/usr/local/lib/python3.7/site-packages:$PYTHONPATH ## this line seems to be causing error need to run "unset PYTHONPATH" each time
 export PATH="$HOME/.bin:$PATH"
 #terraform
